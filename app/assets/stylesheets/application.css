@@ -1,4 +1,105 @@
+*{
+  margin: 0;
+  pading: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+
+
+body {
+  width: 80%;
+  margin: 30px ;
+  /*position: absolute;*/
+}
+
+.title {
+  width: 80%;
+  margin: 20px auto;
+
+
+}
+
+.all_text{
+  padding: 0 25px;
+}
+
+.text {
+  width: 80%;
+  margin: 20px auto;
+  /*position: relative;*/
+
+}
+
+.bookers, .index{
+  font-weight: bold;
+}
+
+.start {
+  width: 80%;
+  margin: 0 auto;
+}
+
+
+
+.index {
+  padding: 0;
+  margin: 10px;
+}
+
+.index_list{
+  position: relative;
+}
+
+
+.index_title , .index_list_title{
+  width: 10%;
+  padding: 1px 1px 5px;
+  display: inline-block;
+
+}
+
+.index_body{
+  padding: 1px 1px 5px;
+  display: inline-block;
+  text-align: center;
+
+}
+
+
+
+.index_list_body{
+  padding: 1px 5px 7px;
+
+}
+
+.index_link{
+  display: inline-block;
+  position: absolute;
+  right: 0;
+}
+
+
+
+
+.show_title, .show_body, .notice{
+  padding: 10px;
+}
+
+.link{
+  padding: 5px;
+}
+
+.edit{
+  padding: 10px;
+}
+
+
 /*
+
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
  *
