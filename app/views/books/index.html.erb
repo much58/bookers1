@@ -1,39 +1,33 @@
 <body>
   <h2 class = index_books>Books</h2>
-  <ul class = index>
-    <li class = index_title >title</li>
-    <li class = index_body >body</li>
-  </ul>
+
+<table>
+  <tr>
+    <th class = index_title>Title</th>
+    <th class = index_body>Body</th>
+  </tr>
+
+  <% @books.each do |book| %>
+  <tr class = index_list>
+    <td class = index_list_title><%= book.title %></td>
+    <td class = index_list_body><%= book.body %></td>
+    <td class = index_link>
+       <%= link_to 'Show', "/books/#{book.id}" %>
+      <%= link_to 'Edit', "/books/#{book.id}/edit" %>
+      <%= link_to 'Destroy', "/books/#{book.id}", method: :delete, "data-confirm" => "本当に削除しますか？" %>
+    </td>
+  </tr>
 
 
-<% @books.each do |book| %>
-  <div class = index_list>
-      <span class = index_list_title>
-        <%= book.title %>
-      </span>
+  <% end %>
 
-      <span class = index_list_body>
-        <%= book.body %>
-      </span>
-
-    <div class = index_link>
-      <%= link_to 'show', "/books/#{book.id}" %>
-      <%= link_to 'edit', "/books/#{book.id}/edit" %>
-      <%= link_to 'destroy', "/books/#{book.id}", method: :delete, "data-confirm" => "本当に削除しますか？" %>
-    </div>
-
-
-  </div>
-
-
-<% end %>
-
+</table>
 
 
   <h2 class = index_new>New book</h2>
 
 <% if @book.errors.any? %>
-  <%= @book.errors.count %>件のエラーが発生しました
+  <%= @book.errors.count %>errors
   <ul>
     <% @book.errors.full_messages.each do |message| %>
       <li><%= message %></li>
